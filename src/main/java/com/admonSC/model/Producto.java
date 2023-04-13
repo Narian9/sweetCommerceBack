@@ -1,10 +1,15 @@
 package com.admonSC.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity //esta clase Platillo se convierte en una entidad de JPA para manejar una persistencia de datos (que esta informacion se quede guardada en una BD)
@@ -17,6 +22,17 @@ public class Producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//le indicamos a JAVA que vamos a utilizar una estratega de generacion de valores de identidad de la base de datos (para generar valores unicos e incrementables para nuestras llaves primarias)
 	@Column(name = "id", unique = true, nullable = false) //especificamos que el campo donde se aplica la estrategia de generacion de valores autoincrementables es una columna llamada id, unica y no nula
 	
+//	@OneToOne()
+//	@JoinTable(
+//	    name = "wishlist",
+//	    joinColumns = @JoinColumn(name = "id"),
+//	    inverseJoinColumns = @JoinColumn(name = "id")
+//	)
+//	private Set<Producto> producto;
+//
+//	public Set<Producto> getProducto() {
+//	  return producto;
+//	}
 
 	
 	//Atributos

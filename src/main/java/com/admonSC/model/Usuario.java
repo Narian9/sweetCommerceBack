@@ -1,13 +1,19 @@
 package com.admonSC.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
+
 @Table(name="usuario")
 
 
@@ -16,6 +22,17 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
 
+//	@OneToOne()
+//	@JoinTable(
+//	    name = "wishlist",
+//	    joinColumns = @JoinColumn(name = "id"),
+//	    inverseJoinColumns = @JoinColumn(name = "id")
+//	)
+//	private Set<Producto> producto;
+//
+//	public Set<Producto> getProducto() {
+//	  return producto;
+//	}
 	
 	//Atribututos
 private Long id;
